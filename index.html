@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: rgb(18, 71, 177);
+            color: beige;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0);
+            padding: 20px;
+            border-radius: 3px;
+        }
+
+        p {
+            font-size: 100px;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+
+    <section>
+    <h1>Counter</h1>
+    <p></p>
+    <button onclick="diminuir()">menos</button>
+    <button onclick="adicionar()">mais</button>
+    <button onclick="zerar()">zerar</button>
+    </section>
+
+    <script>
+
+        let numero = 0
+        mostrarnatela()
+
+        function adicionar() {
+            numero = numero+1
+            mostrarnatela()
+        }
+
+        function diminuir() {
+            numero = numero-1
+            mostrarnatela()
+        }
+
+        function zerar() {
+            numero=0
+            mostrarnatela()
+        }
+        
+        function mostrarnatela() {
+            console.log(numero)
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+    </script>
+
+    
+</body>
+</html>
